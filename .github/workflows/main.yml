@@ -14,12 +14,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd app
+          cd visittracker
           flutter pub get
 
       - name: Run tests
         run: |
-          cd app
+          cd visittracker
           flutter test
 
 
