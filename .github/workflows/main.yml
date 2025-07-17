@@ -7,11 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.13.0'
 
-      - run: flutter pub get
-      - run: flutter test
+      - name: Install dependencies
+        run: |
+          cd app
+          flutter pub get
+
+      - name: Run tests
+        run: |
+          cd app
+          flutter test
+
 
